@@ -23,6 +23,8 @@
 		B3CD05862153FC98002F8C37 /* ConversionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3CD05842153FC98002F8C37 /* ConversionApp.xcdatamodeld */; };
 		B3CD05882153FCA8002F8C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05872153FCA8002F8C37 /* Assets.xcassets */; };
 		B3CD058B2153FCA8002F8C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05892153FCA8002F8C37 /* LaunchScreen.storyboard */; };
+		B3F3B19721547EDB00EAB8AD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B3F3B19621547EDB00EAB8AD /* Podfile */; };
+		B3F3B19921547EF100EAB8AD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = B3F3B19821547EF100EAB8AD /* Podfile.lock */; };
 		E85471B153FC76A857049F4E /* Pods_ConversionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99DEDEA0F29948887664F72 /* Pods_ConversionApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		B3CD05872153FCA8002F8C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3CD058A2153FCA8002F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3CD058C2153FCA8002F8C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F3B19621547EDB00EAB8AD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		B3F3B19821547EF100EAB8AD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
 		D99DEDEA0F29948887664F72 /* Pods_ConversionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConversionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +151,8 @@
 				B3CD059421541560002F8C37 /* SupportingFiles */,
 				B3CD05812153FC98002F8C37 /* Main.storyboard */,
 				B3CD058C2153FCA8002F8C37 /* Info.plist */,
+				B3F3B19621547EDB00EAB8AD /* Podfile */,
+				B3F3B19821547EF100EAB8AD /* Podfile.lock */,
 			);
 			path = ConversionApp;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 			files = (
 				B3CD058B2153FCA8002F8C37 /* LaunchScreen.storyboard in Resources */,
 				B3CD05882153FCA8002F8C37 /* Assets.xcassets in Resources */,
+				B3F3B19921547EF100EAB8AD /* Podfile.lock in Resources */,
+				B3F3B19721547EDB00EAB8AD /* Podfile in Resources */,
 				B3CD05832153FC98002F8C37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
