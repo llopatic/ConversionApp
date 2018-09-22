@@ -8,21 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B35BAE762154177F00763BD9 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BAE752154177F00763BD9 /* CoreDataManger.swift */; };
-		B3A5AD322154289000A81D35 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5AD312154289000A81D35 /* Model.swift */; };
 		B3A5AD34215429C100A81D35 /* CurrencyConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5AD33215429C100A81D35 /* CurrencyConversionViewController.swift */; };
 		B3BE3DBB215433FA008BE17D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBA215433FA008BE17D /* Service.swift */; };
 		B3BE3DBD21544440008BE17D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBC21544440008BE17D /* Constants.swift */; };
-		B3BE3DC421544BBE008BE17D /* Rate+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBE21544BBD008BE17D /* Rate+CoreDataClass copy.swift */; };
-		B3BE3DC521544BBE008BE17D /* Rate+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBF21544BBD008BE17D /* Rate+CoreDataProperties copy.swift */; };
-		B3BE3DC621544BBE008BE17D /* RateDate+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DC021544BBD008BE17D /* RateDate+CoreDataClass copy.swift */; };
-		B3BE3DC721544BBE008BE17D /* RateDate+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DC121544BBE008BE17D /* RateDate+CoreDataProperties copy.swift */; };
-		B3BE3DC821544BBE008BE17D /* Currency+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DC221544BBE008BE17D /* Currency+CoreDataClass copy.swift */; };
-		B3BE3DC921544BBE008BE17D /* Currency+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DC321544BBE008BE17D /* Currency+CoreDataProperties copy.swift */; };
 		B3CD057E2153FC98002F8C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD057D2153FC98002F8C37 /* AppDelegate.swift */; };
 		B3CD05832153FC98002F8C37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05812153FC98002F8C37 /* Main.storyboard */; };
 		B3CD05862153FC98002F8C37 /* ConversionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3CD05842153FC98002F8C37 /* ConversionApp.xcdatamodeld */; };
 		B3CD05882153FCA8002F8C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05872153FCA8002F8C37 /* Assets.xcassets */; };
 		B3CD058B2153FCA8002F8C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05892153FCA8002F8C37 /* LaunchScreen.storyboard */; };
+		B3EEEE0D2156B9490083AC30 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0C2156B9490083AC30 /* Utilities.swift */; };
+		B3EEEE142156DF5C0083AC30 /* RateDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */; };
+		B3EEEE152156DF5C0083AC30 /* RateDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */; };
+		B3EEEE182156DF5C0083AC30 /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */; };
+		B3EEEE192156DF5C0083AC30 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */; };
+		B3EEEE1E2156E17B0083AC30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE1D2156E17B0083AC30 /* Model.swift */; };
+		B3EEEE252156EC5B0083AC30 /* Rate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */; };
+		B3EEEE262156EC5B0083AC30 /* Rate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */; };
 		B3F3B19721547EDB00EAB8AD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B3F3B19621547EDB00EAB8AD /* Podfile */; };
 		B3F3B19921547EF100EAB8AD /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = B3F3B19821547EF100EAB8AD /* Podfile.lock */; };
 		E85471B153FC76A857049F4E /* Pods_ConversionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99DEDEA0F29948887664F72 /* Pods_ConversionApp.framework */; };
@@ -32,16 +33,9 @@
 		25198F040039B7BF73AF188B /* Pods-ConversionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConversionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConversionApp/Pods-ConversionApp.release.xcconfig"; sourceTree = "<group>"; };
 		A22B01F5AA3D3EB9306629CA /* Pods-ConversionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConversionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConversionApp/Pods-ConversionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B35BAE752154177F00763BD9 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
-		B3A5AD312154289000A81D35 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ManagedObjects/Model.swift; sourceTree = "<group>"; };
 		B3A5AD33215429C100A81D35 /* CurrencyConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionViewController.swift; sourceTree = "<group>"; };
 		B3BE3DBA215433FA008BE17D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B3BE3DBC21544440008BE17D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B3BE3DBE21544BBD008BE17D /* Rate+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		B3BE3DBF21544BBD008BE17D /* Rate+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
-		B3BE3DC021544BBD008BE17D /* RateDate+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		B3BE3DC121544BBE008BE17D /* RateDate+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
-		B3BE3DC221544BBE008BE17D /* Currency+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		B3BE3DC321544BBE008BE17D /* Currency+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		B3CD057A2153FC98002F8C37 /* ConversionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CD057D2153FC98002F8C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CD05822153FC98002F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +43,14 @@
 		B3CD05872153FCA8002F8C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3CD058A2153FCA8002F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3CD058C2153FCA8002F8C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3EEEE0C2156B9490083AC30 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3EEEE1D2156E17B0083AC30 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B3F3B19621547EDB00EAB8AD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		B3F3B19821547EF100EAB8AD /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
 		D99DEDEA0F29948887664F72 /* Pods_ConversionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConversionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +88,10 @@
 		B31603F221541C1E00AB8A01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3A5AD312154289000A81D35 /* Model.swift */,
+				B3EEEE1D2156E17B0083AC30 /* Model.swift */,
+				B3BE3DBC21544440008BE17D /* Constants.swift */,
 				B35BAE752154177F00763BD9 /* CoreDataManger.swift */,
 				B3CD05842153FC98002F8C37 /* ConversionApp.xcdatamodeld */,
-				B3BE3DBC21544440008BE17D /* Constants.swift */,
 				B31603F321541C2900AB8A01 /* ManagedObjects */,
 			);
 			path = Model;
@@ -98,12 +100,12 @@
 		B31603F321541C2900AB8A01 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B3BE3DC321544BBE008BE17D /* Currency+CoreDataProperties copy.swift */,
-				B3BE3DC221544BBE008BE17D /* Currency+CoreDataClass copy.swift */,
-				B3BE3DC121544BBE008BE17D /* RateDate+CoreDataProperties copy.swift */,
-				B3BE3DC021544BBD008BE17D /* RateDate+CoreDataClass copy.swift */,
-				B3BE3DBF21544BBD008BE17D /* Rate+CoreDataProperties copy.swift */,
-				B3BE3DBE21544BBD008BE17D /* Rate+CoreDataClass copy.swift */,
+				B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */,
+				B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */,
+				B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */,
+				B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */,
+				B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */,
+				B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 				B3BE3DB9215433DC008BE17D /* Service */,
 				B31603F421541C4200AB8A01 /* ViewControllers */,
 				B3CD059421541560002F8C37 /* SupportingFiles */,
+				B3EEEE0B2156B8EF0083AC30 /* Utilities */,
 				B3CD05812153FC98002F8C37 /* Main.storyboard */,
 				B3CD058C2153FCA8002F8C37 /* Info.plist */,
 				B3F3B19621547EDB00EAB8AD /* Podfile */,
@@ -165,6 +168,14 @@
 				B3CD05892153FCA8002F8C37 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B3EEEE0B2156B8EF0083AC30 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B3EEEE0C2156B9490083AC30 /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,19 +294,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3BE3DC521544BBE008BE17D /* Rate+CoreDataProperties copy.swift in Sources */,
+				B3EEEE1E2156E17B0083AC30 /* Model.swift in Sources */,
+				B3EEEE182156DF5C0083AC30 /* Currency+CoreDataProperties.swift in Sources */,
 				B3A5AD34215429C100A81D35 /* CurrencyConversionViewController.swift in Sources */,
-				B3BE3DC921544BBE008BE17D /* Currency+CoreDataProperties copy.swift in Sources */,
-				B3BE3DC821544BBE008BE17D /* Currency+CoreDataClass copy.swift in Sources */,
+				B3EEEE0D2156B9490083AC30 /* Utilities.swift in Sources */,
 				B35BAE762154177F00763BD9 /* CoreDataManger.swift in Sources */,
-				B3A5AD322154289000A81D35 /* Model.swift in Sources */,
-				B3BE3DC721544BBE008BE17D /* RateDate+CoreDataProperties copy.swift in Sources */,
-				B3BE3DC421544BBE008BE17D /* Rate+CoreDataClass copy.swift in Sources */,
 				B3BE3DBB215433FA008BE17D /* Service.swift in Sources */,
+				B3EEEE142156DF5C0083AC30 /* RateDate+CoreDataClass.swift in Sources */,
 				B3CD05862153FC98002F8C37 /* ConversionApp.xcdatamodeld in Sources */,
-				B3BE3DC621544BBE008BE17D /* RateDate+CoreDataClass copy.swift in Sources */,
+				B3EEEE152156DF5C0083AC30 /* RateDate+CoreDataProperties.swift in Sources */,
+				B3EEEE252156EC5B0083AC30 /* Rate+CoreDataClass.swift in Sources */,
 				B3BE3DBD21544440008BE17D /* Constants.swift in Sources */,
 				B3CD057E2153FC98002F8C37 /* AppDelegate.swift in Sources */,
+				B3EEEE192156DF5C0083AC30 /* Currency+CoreDataClass.swift in Sources */,
+				B3EEEE262156EC5B0083AC30 /* Rate+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

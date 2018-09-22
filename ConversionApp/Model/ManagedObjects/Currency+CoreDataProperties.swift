@@ -2,7 +2,7 @@
 //  Currency+CoreDataProperties.swift
 //  
 //
-//  Created by Leonard Lopatic on 20/09/2018.
+//  Created by Leonard Lopatic on 22/09/2018.
 //
 //
 
@@ -17,6 +17,7 @@ extension Currency {
     }
 
     @NSManaged public var currencyCode: String?
+    @NSManaged public var seqNo: Int64
     @NSManaged public var relRate: Rate?
 
 }

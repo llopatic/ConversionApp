@@ -2,7 +2,7 @@
 //  RateDate+CoreDataProperties.swift
 //  
 //
-//  Created by Leonard Lopatic on 20/09/2018.
+//  Created by Leonard Lopatic on 22/09/2018.
 //
 //
 

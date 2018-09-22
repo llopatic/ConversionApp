@@ -18,6 +18,10 @@ class CoreDataManager {
         
         let context = self.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Rate>(entityName: "Rate")
+        let sortDescriptor = NSSortDescriptor(key: "seqNo", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.returnsObjectsAsFaults = false
+        
         do {
             let ratesArray = try context.fetch(fetchRequest)
             return ratesArray
@@ -31,6 +35,10 @@ class CoreDataManager {
         
         let context = self.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
+        let sortDescriptor = NSSortDescriptor(key: "seqNo", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.returnsObjectsAsFaults = false
+        
         do {
             let currencyArray = try context.fetch(fetchRequest)
             return currencyArray
@@ -40,21 +48,19 @@ class CoreDataManager {
         }
     }
     
-    func getRateDate() -> RateDate? {
+    func getRateDates() -> Array<RateDate>? {
         
         let context = self.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<RateDate>(entityName: "RateDate")
+        fetchRequest.returnsObjectsAsFaults = false
         do {
-            let rateDates = try context.fetch(fetchRequest)
-            if rateDates.count > 0 {
-                return rateDates[0]
-            } else {
-                return nil
-            }
+            let rateDateArray = try context.fetch(fetchRequest)
+            return rateDateArray
         } catch let error as NSError{
-            print ("Error getting rate date from database: \(error.userInfo)")
+            print ("Error getting rate dates from database: \(error.userInfo)")
             return nil
         }
+
     }
     
     func deleteObjectsFromContext(_ objects: Array<NSManagedObject>) {
@@ -65,6 +71,8 @@ class CoreDataManager {
     
     func addRate(currencyCode: String, unitValue: Int, sellingRate: Double, medianRate: Double, buyingRate: Double) -> Rate {
         
+        let nextRateSeqNo = getNextRateSeqNo()
+        
         let entityDescription = NSEntityDescription.entity(forEntityName: "Rate", in: self.persistentContainer.viewContext)!
         
         let rate = NSManagedObject(entity: entityDescription, insertInto: self.persistentContainer.viewContext) as! Rate
@@ -74,19 +82,49 @@ class CoreDataManager {
         rate.sellingRate = sellingRate
         rate.medianRate = medianRate
         rate.buyingRate = buyingRate
+        rate.seqNo = Int64(nextRateSeqNo)
         
         return rate
     }
     
+    func getNextRateSeqNo() -> Int {
+        let context = self.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Rate>(entityName: "Rate")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let rateArray = try context.fetch(fetchRequest)
+            return rateArray.count
+        } catch let error as NSError{
+            print ("Error getting rates from database: \(error.userInfo)")
+            return 0
+        }
+    }
+    
     func addCurrency(currencyCode: String) -> Currency {
+        
+        let nextCurrencySeqNo = getNextCurrencySeqNo()
         
         let entityDescription = NSEntityDescription.entity(forEntityName: "Currency", in: self.persistentContainer.viewContext)!
         
         let currency = NSManagedObject(entity: entityDescription, insertInto: self.persistentContainer.viewContext) as! Currency
         
         currency.currencyCode = currencyCode
+        currency.seqNo = Int64(nextCurrencySeqNo)
         
         return currency
+    }
+    
+    func getNextCurrencySeqNo() -> Int {
+        let context = self.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let currencyArray = try context.fetch(fetchRequest)
+            return currencyArray.count
+        } catch let error as NSError{
+            print ("Error getting currencies from database: \(error.userInfo)")
+            return 0
+        }
     }
     
     func addRateDate(date: Date) -> RateDate {

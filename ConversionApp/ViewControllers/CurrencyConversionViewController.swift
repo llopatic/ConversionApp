@@ -43,10 +43,12 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
         fromPickerView.reloadAllComponents()
         toPickerView.reloadAllComponents()
        
-        let fromCurrency = Model.sharedInstance.currencies[fromPickerView.selectedRow(inComponent: 0)]
-        let toCurrency = Model.sharedInstance.currencies[toPickerView.selectedRow(inComponent: 0)]
+//        let fromCurrency = Model.sharedInstance.currencies[fromPickerView.selectedRow(inComponent: 0)]
+//        let toCurrency = Model.sharedInstance.currencies[toPickerView.selectedRow(inComponent: 0)]
+//
+//        resultLabel.text = Model.sharedInstance.calculateRates(fromCurrency: fromCurrency, toCurrency: toCurrency)
         
-        resultLabel.text = Model.sharedInstance.calculateRates(fromCurrency: fromCurrency, toCurrency: toCurrency)
+        resultLabel.text = "Rates've just synchronized with the server!"
     }
     
     
@@ -72,10 +74,10 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
             
         } else {
             
-        let fromCurrency = Model.sharedInstance.currencies[fromPickerView.selectedRow(inComponent: 0)]
-        let toCurrency = Model.sharedInstance.currencies[toPickerView.selectedRow(inComponent: 0)]
-        
-        resultLabel.text = Model.sharedInstance.calculateRates(fromCurrency: fromCurrency, toCurrency: toCurrency)
+            let fromCurrency = Model.sharedInstance.currencies[fromPickerView.selectedRow(inComponent: 0)]
+            let toCurrency = Model.sharedInstance.currencies[toPickerView.selectedRow(inComponent: 0)]
+            
+            resultLabel.text = Model.sharedInstance.calculateRates(fromCurrency: fromCurrency, toCurrency: toCurrency)
         }
     }
     

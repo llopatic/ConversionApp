@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Currency" representedClassName="Currency" syncable="YES">
         <attribute name="currencyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="relRate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rate" inverseName="relCurrency" inverseEntity="Rate" syncable="YES"/>
     </entity>
     <entity name="Rate" representedClassName="Rate" syncable="YES">
@@ -9,6 +10,7 @@
         <attribute name="currencyCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medianRate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sellingRate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="seqNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="unitValue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="relCurrency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="relRate" inverseEntity="Currency" syncable="YES"/>
         <relationship name="relRateDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RateDate" inverseName="relRates" inverseEntity="RateDate" syncable="YES"/>
@@ -21,8 +23,8 @@
         <relationship name="relRates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rate" inverseName="relRateDate" inverseEntity="Rate" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Currency" positionX="-920" positionY="-1054" width="128" height="73"/>
-        <element name="Rate" positionX="-614" positionY="-1053" width="128" height="161"/>
+        <element name="Currency" positionX="-920" positionY="-1054" width="128" height="88"/>
+        <element name="Rate" positionX="-614" positionY="-1053" width="128" height="191"/>
         <element name="RateDate" positionX="-918" positionY="-963" width="128" height="73"/>
     </elements>
 </model>

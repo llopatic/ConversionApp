@@ -17,7 +17,7 @@ class Model {
 
     var rates = Array<Rate>()
     var currencies = Array<Currency>()
-    var rateDate: RateDate?
+    var rateDates = Array<RateDate>()
     
     func registerForServiceNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(Model.ratesReceived(_:)), name: NSNotification.Name(rawValue: ratesReceivedNotification), object: nil)
@@ -31,35 +31,40 @@ class Model {
        
         CoreDataManager.sharedInstance.deleteObjectsFromContext(self.rates)
         CoreDataManager.sharedInstance.deleteObjectsFromContext(self.currencies)
-       
-        if let date = self.rateDate {
-            CoreDataManager.sharedInstance.deleteObjectsFromContext([date])
-        }
+        CoreDataManager.sharedInstance.deleteObjectsFromContext(self.rateDates)
         
         self.rates = [Rate]()
         self.currencies = [Currency]()
-        self.rateDate = nil
+        self.rateDates = [RateDate]()
 
         for rate in receivedRates {
             
-            let currencyCode = rate["currency_code"]! as! String
-            let unitValue = rate["unit_value"]! as! Int
-            let sellingRate = Double(rate["selling_rate"] as! String)!
-            let medianRate = Double(rate["median_rate"]! as! String)!
-            let buyingRate = Double(rate["buying_rate"]! as! String)!
-            
-            let insertedRate = CoreDataManager.sharedInstance.addRate(currencyCode: currencyCode, unitValue: unitValue, sellingRate: sellingRate, medianRate: medianRate, buyingRate: buyingRate)
-            self.rates.append(insertedRate)
-            
-            let insertedCurrency = CoreDataManager.sharedInstance.addCurrency(currencyCode: currencyCode)
-            self.currencies.append(insertedCurrency)
-        }
+            if let rateDateFromService = rate["rate_date"] {
+                if let rateDate = getDateFromString(strDate: rateDateFromService as! String, format: rateDateFormat)
+                {
+                    let insertedRateDate = CoreDataManager.sharedInstance.addRateDate(date: rateDate)
+                    self.rateDates.append(insertedRateDate)
+                }
+                
+            }
+            else {
+                let currencyCode = rate["currency_code"]! as! String
+                let unitValue = rate["unit_value"]! as! Int
+                let sellingRate = Double(rate["selling_rate"] as! String)!
+                let medianRate = Double(rate["median_rate"]! as! String)!
+                let buyingRate = Double(rate["buying_rate"]! as! String)!
+                
+                let insertedRate = CoreDataManager.sharedInstance.addRate(currencyCode: currencyCode, unitValue: unitValue, sellingRate: sellingRate, medianRate: medianRate, buyingRate: buyingRate)
+                self.rates.append(insertedRate)
+                
+                let insertedCurrency = CoreDataManager.sharedInstance.addCurrency(currencyCode: currencyCode)
+                self.currencies.append(insertedCurrency)
+            }
+    }
         
-        let insertedRateDate = CoreDataManager.sharedInstance.addRateDate(date: Date())
-        self.rateDate = insertedRateDate
-            
-
         CoreDataManager.sharedInstance.saveContext()
+        
+        //print(rateDates)
         
         let queue = DispatchQueue.main
         queue.async {
@@ -96,7 +101,7 @@ class Model {
                 } else {
                     Model.sharedInstance.rates = rates
                     currencies = CoreDataManager.sharedInstance.getCurrencies()!
-                    rateDate = CoreDataManager.sharedInstance.getRateDate()!
+                    rateDates = CoreDataManager.sharedInstance.getRateDates()!
                     return true
                 }
             }
@@ -108,21 +113,21 @@ class Model {
     
     func rateDateIsNotCurrentDate() -> Bool {
         
-        guard let rateDateInDatabaseAsNSDate = CoreDataManager.sharedInstance.getRateDate()?.rateDate
-        else {return true}
-        
-        let rateDateInDatabase = rateDateInDatabaseAsNSDate as Date
-        let todayDate = Date()
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
-        
-        let rateDateInDatabaseString = dateFormatter.string(from: rateDateInDatabase )
-        
-        let todayDateString = dateFormatter.string(from: todayDate )
-
-        return rateDateInDatabaseString != todayDateString
+        if let rateDates = CoreDataManager.sharedInstance.getRateDates() {
+            
+            let rateDateInDatabase = rateDates[0].rateDate! as Date
+            let todayDate = Date()
+            
+            let rateDateInDatabaseString = getStringFrom(date: rateDateInDatabase, usingFormat: rateDateFormat)
+            let todayDateString = getStringFrom(date: todayDate, usingFormat: rateDateFormat)
+            
+            return rateDateInDatabaseString != todayDateString
+            
+        } else {
+            
+            return true
+            
+        }
         
     }
     

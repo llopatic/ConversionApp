@@ -9,5 +9,6 @@
 import Foundation
 
 let HNB_URL = "http://hnbex.eu/api/v1/rates/daily/"
+let rateDateFormat = "yyyy-MM-dd"
 let ratesReceivedNotification = "ratesReceivedNotification"
 let ratesModelUpdated = "ratesModelUpdated"

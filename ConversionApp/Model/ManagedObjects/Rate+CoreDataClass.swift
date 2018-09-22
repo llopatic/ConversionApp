@@ -1,8 +1,9 @@
 //
 //  Rate+CoreDataClass.swift
-//  
+//  ConversionApp
 //
-//  Created by Leonard Lopatic on 20/09/2018.
+//  Created by Leonard Lopatic on 22/09/2018.
+//  Copyright © 2018 Leonard Lopatic. All rights reserved.
 //
 //
 

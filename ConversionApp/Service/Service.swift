@@ -18,8 +18,15 @@ class Service {
     fileprivate init() {}
     
     func loadRates(controller: UIViewController) {
+    
+        print ("Web service is called!")
         
-        let strUrl = "\(HNB_URL)"
+        let rateDate = Date()
+        
+        let strRateDate = getStringFrom(date: rateDate, usingFormat: rateDateFormat)
+        
+        
+        let strUrl = "\(HNB_URL)?date=\(strRateDate)"
         let url = URL(string: strUrl)
         let request = URLRequest(url: url!)
         
@@ -30,8 +37,8 @@ class Service {
             if error == nil {
                 
                 let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                
-                let rates = self.parseResponseString(responseString!)
+                var rates = self.parseResponseString(responseString!)
+                rates.append(["rate_date":strRateDate])
                 
                 //print(rates)
                 
