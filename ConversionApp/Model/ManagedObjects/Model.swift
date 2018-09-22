@@ -25,7 +25,9 @@ class Model {
     
     @objc func ratesReceived(_ notification: Notification) {
         
-        let receivedRates = (notification as NSNotification).userInfo!["rates"] as! [[String: Any]]
+        var receivedRates = (notification as NSNotification).userInfo!["rates"] as! [[String: Any]]
+        
+        appendRatesForKunaInReceived(rates: &receivedRates)
        
         CoreDataManager.sharedInstance.deleteObjectsFromContext(self.rates)
         CoreDataManager.sharedInstance.deleteObjectsFromContext(self.currencies)
@@ -67,6 +69,20 @@ class Model {
         
     }
     
+    func appendRatesForKunaInReceived(rates: inout Array<Dictionary<String,Any>>) {
+        
+        let HRKDict: [String: Any] = [
+            "unit_value": 1,
+            "median_rate": "1.0",
+            "currency_code": "HRK",
+            "selling_rate": "1.0",
+            "buying_rate": "1.0"
+        ]
+        
+        rates.insert(HRKDict, at: 0)
+        
+    }
+    
     func loadRatesFromDatabase() -> Bool {
     
         if let rates = CoreDataManager.sharedInstance.getRates() {
@@ -92,8 +108,10 @@ class Model {
     
     func rateDateIsNotCurrentDate() -> Bool {
         
-        let rateDateInDatabase = CoreDataManager.sharedInstance.getRateDate()?.rateDate as! Date
+        guard let rateDateInDatabaseAsNSDate = CoreDataManager.sharedInstance.getRateDate()?.rateDate
+        else {return true}
         
+        let rateDateInDatabase = rateDateInDatabaseAsNSDate as Date
         let todayDate = Date()
         
         let dateFormatter = DateFormatter()
@@ -113,13 +131,16 @@ class Model {
         
         var fromBuyingRate: Double = 0.0
         var fromSellingRate: Double = 0.0
+        var fromUnitValue: Double = 0.0
         var toBuyingRate: Double = 0.0
         var toSellingRate: Double = 0.0
+        var toUnitValue: Double = 0.0
         
         for rate in Model.sharedInstance.rates {
             if rate.currencyCode == fromCurrency.currencyCode {
                 fromBuyingRate = rate.buyingRate
                 fromSellingRate = rate.sellingRate
+                fromUnitValue = Double(rate.unitValue)
             }
         }
         
@@ -127,11 +148,13 @@ class Model {
             if rate.currencyCode == toCurrency.currencyCode {
                 toBuyingRate = rate.buyingRate
                 toSellingRate = rate.sellingRate
+                toUnitValue = Double(rate.unitValue)
             }
         }
         
-        let buyingRate = Double(round(fromBuyingRate/toBuyingRate*1000000)/1000000)
-        let sellingRate = Double(round(fromSellingRate/toSellingRate*1000000)/1000000)
+        let buyingRate = String(format: "%.8f", fromBuyingRate/fromUnitValue * toUnitValue/toBuyingRate)
+        let sellingRate = String(format: "%.8f", fromSellingRate/fromUnitValue * toUnitValue/toSellingRate)
+
         
         return "Buying R: \(buyingRate)  Selling R: \(sellingRate)"
         
