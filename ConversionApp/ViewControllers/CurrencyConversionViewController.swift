@@ -72,7 +72,14 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
         }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //The next line solves problem of displaying wrong row in Picker View
+        pickerView.selectRow(row, inComponent: 0, animated: true)
         resultLabel.text = "Buying R:    Selling R:"
+//        if pickerView == fromPickerView {
+//            print("fromPickerView selected row = \(row)")
+//        } else if pickerView == toPickerView {
+//            print("toPickerView selected row = \(row)")
+//        }
     }
     
     @IBAction func submitButtonClicked(_ sender: UIButton) {
