@@ -94,40 +94,46 @@ class Model {
             if rates.count == 0 {
                 return false
             } else {
-                if rateDateIsNotCurrentDate() {
-                    
-                    return false
-                    
-                } else {
-                    Model.sharedInstance.rates = rates
-                    currencies = CoreDataManager.sharedInstance.getCurrencies()!
-                    rateDates = CoreDataManager.sharedInstance.getRateDates()!
-                    return true
+                Model.sharedInstance.rates = rates
+                currencies = CoreDataManager.sharedInstance.getCurrencies()!
+                rateDates = CoreDataManager.sharedInstance.getRateDates()!
+                return true
                 }
-            }
         } else {
             return false
         }
-
     }
     
     func rateDateIsNotCurrentDate() -> Bool {
         
         if let rateDates = CoreDataManager.sharedInstance.getRateDates() {
+            if rateDates.count > 0 {
+                let rateDateInDatabase = rateDates[0].rateDate! as Date
+                let todayDate = currentDate()
+                
+                let rateDateInDatabaseString = getStringFrom(date: rateDateInDatabase, usingFormat: rateDateFormat)
+                let todayDateString = getStringFrom(date: todayDate, usingFormat: rateDateFormat)
+                
+                return rateDateInDatabaseString != todayDateString
+            } else {
+                
+                return true
             
-            let rateDateInDatabase = rateDates[0].rateDate! as Date
-            let todayDate = Date()
-            
-            let rateDateInDatabaseString = getStringFrom(date: rateDateInDatabase, usingFormat: rateDateFormat)
-            let todayDateString = getStringFrom(date: todayDate, usingFormat: rateDateFormat)
-            
-            return rateDateInDatabaseString != todayDateString
+            }
             
         } else {
             
             return true
             
         }
+        
+    }
+    
+    func currentDate() -> Date {
+        
+        return Date()
+        
+        //return getDateFromString(strDate: "2018-09-20", format: rateDateFormat)!
         
     }
     
@@ -164,5 +170,12 @@ class Model {
         return "Buying R: \(buyingRate)  Selling R: \(sellingRate)"
         
     }
+    
+    func getRateDateFromDatabase(format: String) -> String{
+        let rateDate = rateDates[0].rateDate! as Date
+        let strRateDate = getStringFrom(date: rateDate, usingFormat: format)
+        return strRateDate
+    }
+    
 }
 

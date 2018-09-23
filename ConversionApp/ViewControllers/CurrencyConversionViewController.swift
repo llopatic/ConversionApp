@@ -16,7 +16,8 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
     
     @IBOutlet weak var resultLabel: UILabel!
     
-  
+    @IBOutlet weak var rateDateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,12 +35,17 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
         
         if Model.sharedInstance.loadRatesFromDatabase() == false {
             Service.sharedInstance.loadRates(controller: self)
+        } else {
+            rateDateLabel.text = Model.sharedInstance.getRateDateFromDatabase(format: "MM/dd/yyyy")
+            resultLabel.text = "Rates've just loaded from database!"
+            
         }
         
     }
     
     @objc func ratesUpdated() {
         
+        rateDateLabel.text = Model.sharedInstance.getRateDateFromDatabase(format: "MM/dd/yyyy")
         fromPickerView.reloadAllComponents()
         toPickerView.reloadAllComponents()
        

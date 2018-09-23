@@ -21,7 +21,7 @@ class Service {
     
         print ("Web service is called!")
         
-        let rateDate = Date()
+        let rateDate = Model.sharedInstance.currentDate()
         
         let strRateDate = getStringFrom(date: rateDate, usingFormat: rateDateFormat)
         
@@ -34,18 +34,26 @@ class Service {
         
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
-            if error == nil {
+            var statusCode = 200
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
+            
+            if error == nil && statusCode == 200 {
                 
-                let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                var rates = self.parseResponseString(responseString!)
+                var rates = (try! JSONSerialization.jsonObject(with: data!, options: .allowFragments)) as! [[String: Any]]
+                
                 rates.append(["rate_date":strRateDate])
                 
                 //print(rates)
                 
                 let notification = Notification(name: Notification.Name(ratesReceivedNotification), object: nil, userInfo: ["rates": rates])
                 NotificationCenter.default.post(notification)
+                
             } else {
-                print("Error \(String(describing: error.debugDescription))")
+                
+                print("Error: HTTP Status Code = \(statusCode)")
                 let alert = UIAlertController(
                     title: "Connection issues!",
                     message: "Error occured when trying to get today's rates from the server! Rates in the app are not current!",
@@ -54,18 +62,13 @@ class Service {
                     alert.addAction(okAction)
                     alert.preferredAction = okAction
                     controller.present(alert, animated: true)
+            
             }
         
         }
         
         task.resume()
-    }
-    
-    func parseResponseString(_ responseString: NSString) -> [[String: Any]] {
         
-        let jsonData = responseString.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: true)
-        let objectsArray = (try! JSONSerialization.jsonObject(with: jsonData!, options: .allowFragments)) as! [[String: Any]]
-        
-        return objectsArray
     }
+
 }
