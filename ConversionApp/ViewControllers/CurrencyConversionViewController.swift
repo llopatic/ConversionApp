@@ -69,8 +69,11 @@ class CurrencyConversionViewController: UIViewController, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Model.sharedInstance.currencies[row].currencyCode
-        
         }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        resultLabel.text = "Buying R:    Selling R:"
+    }
     
     @IBAction func submitButtonClicked(_ sender: UIButton) {
         

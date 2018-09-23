@@ -62,8 +62,8 @@
                                     <action selector="submitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mp-No-7cC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buying R: 0.000000   Selling R: 0.000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz3-In-I1p">
-                                <rect key="frame" x="16" y="508" width="288" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buying R:    Selling R:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz3-In-I1p">
+                                <rect key="frame" x="0.0" y="508" width="320" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,8 +87,8 @@
                             <constraint firstItem="T21-tY-jOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4PO-Dd-J0p"/>
                             <constraint firstItem="WUP-Bq-CcZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6B0-z6-r40"/>
                             <constraint firstItem="Rz3-In-I1p" firstAttribute="top" secondItem="T21-tY-jOH" secondAttribute="bottom" constant="8" id="6We-gG-xkI"/>
-                            <constraint firstItem="Rz3-In-I1p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Adf-ZH-mcX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rz3-In-I1p" secondAttribute="trailing" constant="16" id="KNa-AZ-PmD"/>
+                            <constraint firstItem="Rz3-In-I1p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Adf-ZH-mcX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rz3-In-I1p" secondAttribute="trailing" id="KNa-AZ-PmD"/>
                             <constraint firstItem="Ez0-SK-sqW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mh3-Rp-OKy"/>
                             <constraint firstItem="OS2-RZ-m85" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OiV-ac-nde"/>
                             <constraint firstItem="Ez0-SK-sqW" firstAttribute="top" secondItem="OS2-RZ-m85" secondAttribute="bottom" constant="8" id="RVx-V5-BbT"/>
