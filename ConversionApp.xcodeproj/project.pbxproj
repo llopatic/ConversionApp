@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		98412AE6157F9D790853EFD5 /* Pods_ConversionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECCA2876354D8A7F63ACAB /* Pods_ConversionApp.framework */; };
+		B34C65A2231EA7BF002A1C40 /* RateDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C65A1231EA7BF002A1C40 /* RateDateViewController.swift */; };
 		B35BAE762154177F00763BD9 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BAE752154177F00763BD9 /* CoreDataManger.swift */; };
 		B3A5AD34215429C100A81D35 /* CurrencyConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5AD33215429C100A81D35 /* CurrencyConversionViewController.swift */; };
 		B3BE3DBB215433FA008BE17D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBA215433FA008BE17D /* Service.swift */; };
 		B3BE3DBD21544440008BE17D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE3DBC21544440008BE17D /* Constants.swift */; };
+		B3C877F3231ECBF500644535 /* Rate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C877F1231ECBF500644535 /* Rate+CoreDataClass.swift */; };
+		B3C877F4231ECBF500644535 /* Rate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C877F2231ECBF500644535 /* Rate+CoreDataProperties.swift */; };
 		B3CD057E2153FC98002F8C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD057D2153FC98002F8C37 /* AppDelegate.swift */; };
 		B3CD05832153FC98002F8C37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05812153FC98002F8C37 /* Main.storyboard */; };
 		B3CD05862153FC98002F8C37 /* ConversionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3CD05842153FC98002F8C37 /* ConversionApp.xcdatamodeld */; };
 		B3CD05882153FCA8002F8C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05872153FCA8002F8C37 /* Assets.xcassets */; };
 		B3CD058B2153FCA8002F8C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD05892153FCA8002F8C37 /* LaunchScreen.storyboard */; };
 		B3EEEE0D2156B9490083AC30 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0C2156B9490083AC30 /* Utilities.swift */; };
-		B3EEEE142156DF5C0083AC30 /* RateDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */; };
-		B3EEEE152156DF5C0083AC30 /* RateDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */; };
-		B3EEEE182156DF5C0083AC30 /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */; };
-		B3EEEE192156DF5C0083AC30 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */; };
 		B3EEEE1E2156E17B0083AC30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE1D2156E17B0083AC30 /* Model.swift */; };
-		B3EEEE252156EC5B0083AC30 /* Rate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */; };
-		B3EEEE262156EC5B0083AC30 /* Rate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25ECCA2876354D8A7F63ACAB /* Pods_ConversionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConversionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51735EC16AD10FEEA3E84485 /* Pods-ConversionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConversionApp.debug.xcconfig"; path = "Target Support Files/Pods-ConversionApp/Pods-ConversionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		76613224B0366CAFACF8AC78 /* Pods-ConversionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConversionApp.release.xcconfig"; path = "Target Support Files/Pods-ConversionApp/Pods-ConversionApp.release.xcconfig"; sourceTree = "<group>"; };
+		B34C65A1231EA7BF002A1C40 /* RateDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDateViewController.swift; sourceTree = "<group>"; };
 		B35BAE752154177F00763BD9 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 		B3A5AD33215429C100A81D35 /* CurrencyConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionViewController.swift; sourceTree = "<group>"; };
 		B3BE3DBA215433FA008BE17D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B3BE3DBC21544440008BE17D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3C877F1231ECBF500644535 /* Rate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C877F2231ECBF500644535 /* Rate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B3CD057A2153FC98002F8C37 /* ConversionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CD057D2153FC98002F8C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CD05822153FC98002F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,13 +43,7 @@
 		B3CD058A2153FCA8002F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3CD058C2153FCA8002F8C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3EEEE0C2156B9490083AC30 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RateDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B3EEEE1D2156E17B0083AC30 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +72,6 @@
 				51735EC16AD10FEEA3E84485 /* Pods-ConversionApp.debug.xcconfig */,
 				76613224B0366CAFACF8AC78 /* Pods-ConversionApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,12 +90,8 @@
 		B31603F321541C2900AB8A01 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B3EEEE0E2156DF5C0083AC30 /* RateDate+CoreDataClass.swift */,
-				B3EEEE0F2156DF5C0083AC30 /* RateDate+CoreDataProperties.swift */,
-				B3EEEE132156DF5C0083AC30 /* Currency+CoreDataClass.swift */,
-				B3EEEE122156DF5C0083AC30 /* Currency+CoreDataProperties.swift */,
-				B3EEEE232156EC5B0083AC30 /* Rate+CoreDataClass.swift */,
-				B3EEEE242156EC5B0083AC30 /* Rate+CoreDataProperties.swift */,
+				B3C877F1231ECBF500644535 /* Rate+CoreDataClass.swift */,
+				B3C877F2231ECBF500644535 /* Rate+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -110,6 +99,7 @@
 		B31603F421541C4200AB8A01 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B34C65A1231EA7BF002A1C40 /* RateDateViewController.swift */,
 				B3A5AD33215429C100A81D35 /* CurrencyConversionViewController.swift */,
 			);
 			path = ViewControllers;
@@ -294,19 +284,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3EEEE1E2156E17B0083AC30 /* Model.swift in Sources */,
-				B3EEEE182156DF5C0083AC30 /* Currency+CoreDataProperties.swift in Sources */,
 				B3A5AD34215429C100A81D35 /* CurrencyConversionViewController.swift in Sources */,
 				B3EEEE0D2156B9490083AC30 /* Utilities.swift in Sources */,
 				B35BAE762154177F00763BD9 /* CoreDataManger.swift in Sources */,
 				B3BE3DBB215433FA008BE17D /* Service.swift in Sources */,
-				B3EEEE142156DF5C0083AC30 /* RateDate+CoreDataClass.swift in Sources */,
 				B3CD05862153FC98002F8C37 /* ConversionApp.xcdatamodeld in Sources */,
-				B3EEEE152156DF5C0083AC30 /* RateDate+CoreDataProperties.swift in Sources */,
-				B3EEEE252156EC5B0083AC30 /* Rate+CoreDataClass.swift in Sources */,
 				B3BE3DBD21544440008BE17D /* Constants.swift in Sources */,
+				B3C877F3231ECBF500644535 /* Rate+CoreDataClass.swift in Sources */,
+				B3C877F4231ECBF500644535 /* Rate+CoreDataProperties.swift in Sources */,
 				B3CD057E2153FC98002F8C37 /* AppDelegate.swift in Sources */,
-				B3EEEE192156DF5C0083AC30 /* Currency+CoreDataClass.swift in Sources */,
-				B3EEEE262156EC5B0083AC30 /* Rate+CoreDataProperties.swift in Sources */,
+				B34C65A2231EA7BF002A1C40 /* RateDateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,15 +438,16 @@
 			baseConfigurationReference = 51735EC16AD10FEEA3E84485 /* Pods-ConversionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6WDAUV9Y2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MK4YMJ2N96;
 				INFOPLIST_FILE = ConversionApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mob-apps.design.ConversionApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "design.mob-apps.ConversionApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AllMyAppsDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,15 +458,17 @@
 			baseConfigurationReference = 76613224B0366CAFACF8AC78 /* Pods-ConversionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6WDAUV9Y2;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MK4YMJ2N96;
 				INFOPLIST_FILE = ConversionApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mob-apps.design.ConversionApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "design.mob-apps.ConversionApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AllMyAppsDistribution;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

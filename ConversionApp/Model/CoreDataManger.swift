@@ -14,13 +14,14 @@ class CoreDataManager {
     static let sharedInstance = CoreDataManager()
     fileprivate init() {}
     
-    func getRates() -> Array<Rate>? {
+    func getRates(rateDate: Date) -> Array<Rate>? {
         
         let context = self.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Rate>(entityName: "Rate")
+        let predicate = NSPredicate(format: "rateDate = %@", rateDate as NSDate)
+        fetchRequest.predicate = predicate
         let sortDescriptor = NSSortDescriptor(key: "seqNo", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        fetchRequest.returnsObjectsAsFaults = false
         
         do {
             let ratesArray = try context.fetch(fetchRequest)
@@ -31,112 +32,19 @@ class CoreDataManager {
         }
     }
     
-    func getCurrencies() -> Array<Currency>? {
-        
-        let context = self.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
-        let sortDescriptor = NSSortDescriptor(key: "seqNo", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            let currencyArray = try context.fetch(fetchRequest)
-            return currencyArray
-        } catch let error as NSError{
-            print ("Error getting currencies from database: \(error.userInfo)")
-            return nil
-        }
-    }
-    
-    func getRateDates() -> Array<RateDate>? {
-        
-        let context = self.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<RateDate>(entityName: "RateDate")
-        fetchRequest.returnsObjectsAsFaults = false
-        do {
-            let rateDateArray = try context.fetch(fetchRequest)
-            return rateDateArray
-        } catch let error as NSError{
-            print ("Error getting rate dates from database: \(error.userInfo)")
-            return nil
-        }
-
-    }
-    
-    func deleteObjectsFromContext(_ objects: Array<NSManagedObject>) {
-        for obj in objects {
-            self.persistentContainer.viewContext.delete(obj)
-        }
-    }
-    
-    func addRate(currencyCode: String, unitValue: Int, sellingRate: Double, medianRate: Double, buyingRate: Double) -> Rate {
-        
-        let nextRateSeqNo = getNextRateSeqNo()
-        
-        let entityDescription = NSEntityDescription.entity(forEntityName: "Rate", in: self.persistentContainer.viewContext)!
-        
-        let rate = NSManagedObject(entity: entityDescription, insertInto: self.persistentContainer.viewContext) as! Rate
-        
+    func addRate(rateDate: Date, seqNo: Int, currencyCode: String, unitValue: Int, sellingRate: Double, medianRate: Double, buyingRate: Double) -> Rate {
+        let context = persistentContainer.viewContext
+        let rate = Rate(context: context)
+        rate.rateDate = rateDate as NSDate
+        rate.seqNo = Int64(seqNo)
         rate.currencyCode = currencyCode
         rate.unitValue = Int64(unitValue)
         rate.sellingRate = sellingRate
         rate.medianRate = medianRate
         rate.buyingRate = buyingRate
-        rate.seqNo = Int64(nextRateSeqNo)
-        
         return rate
     }
     
-    func getNextRateSeqNo() -> Int {
-        let context = self.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<Rate>(entityName: "Rate")
-        fetchRequest.returnsObjectsAsFaults = false
-        do {
-            let rateArray = try context.fetch(fetchRequest)
-            return rateArray.count
-        } catch let error as NSError{
-            print ("Error getting rates from database: \(error.userInfo)")
-            return 0
-        }
-    }
-    
-    func addCurrency(currencyCode: String) -> Currency {
-        
-        let nextCurrencySeqNo = getNextCurrencySeqNo()
-        
-        let entityDescription = NSEntityDescription.entity(forEntityName: "Currency", in: self.persistentContainer.viewContext)!
-        
-        let currency = NSManagedObject(entity: entityDescription, insertInto: self.persistentContainer.viewContext) as! Currency
-        
-        currency.currencyCode = currencyCode
-        currency.seqNo = Int64(nextCurrencySeqNo)
-        
-        return currency
-    }
-    
-    func getNextCurrencySeqNo() -> Int {
-        let context = self.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
-        fetchRequest.returnsObjectsAsFaults = false
-        do {
-            let currencyArray = try context.fetch(fetchRequest)
-            return currencyArray.count
-        } catch let error as NSError{
-            print ("Error getting currencies from database: \(error.userInfo)")
-            return 0
-        }
-    }
-    
-    func addRateDate(date: Date) -> RateDate {
-        
-        let entityDescription = NSEntityDescription.entity(forEntityName: "RateDate", in: self.persistentContainer.viewContext)!
-        
-        let rateDate = NSManagedObject(entity: entityDescription, insertInto: self.persistentContainer.viewContext) as! RateDate
-        
-        rateDate.rateDate = date as NSDate
-        
-        return rateDate
-    }
     
     // MARK: - Core Data stack
 

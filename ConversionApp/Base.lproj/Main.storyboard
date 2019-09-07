@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BJl-s9-CnP">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,64 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9c-c0-0K6">
-                                <rect key="frame" x="36" y="36" width="248" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Currency Conversion  Croatian National Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9c-c0-0K6">
+                                <rect key="frame" x="76.5" y="80" width="167.5" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-Bq-CcZ">
-                                <rect key="frame" x="100" y="139" width="120.5" height="21.5"/>
+                                <rect key="frame" x="100" y="214" width="120.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-RZ-m85">
-                                <rect key="frame" x="0.0" y="168.5" width="320" height="125"/>
+                                <rect key="frame" x="0.0" y="243.5" width="320" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="dIj-Po-eBo"/>
+                                    <constraint firstAttribute="height" constant="100" id="dIj-Po-eBo"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="FSP-pX-89e"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez0-SK-sqW">
-                                <rect key="frame" x="111" y="301.5" width="98.5" height="21.5"/>
+                                <rect key="frame" x="111" y="351.5" width="98.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g10-a1-Yc3">
-                                <rect key="frame" x="0.0" y="331" width="320" height="125"/>
+                                <rect key="frame" x="0.0" y="381" width="320" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="qtI-hb-Kak"/>
+                                    <constraint firstAttribute="height" constant="100" id="qtI-hb-Kak"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="sWf-or-RaX"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-tY-jOH">
-                                <rect key="frame" x="129" y="464" width="62" height="36"/>
+                                <rect key="frame" x="145" y="489" width="30" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mp-No-7cC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buying R:    Selling R:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz3-In-I1p">
-                                <rect key="frame" x="0.0" y="508" width="320" height="17"/>
+                                <rect key="frame" x="0.0" y="533" width="320" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TB1-wO-jC4">
-                                <rect key="frame" x="158.5" y="107.5" width="4.5" height="19.5"/>
+                                <rect key="frame" x="158" y="182.5" width="4.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe7-8x-bUu">
-                                <rect key="frame" x="120" y="78" width="79.5" height="21.5"/>
+                                <rect key="frame" x="120.5" y="153" width="79.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -96,7 +95,7 @@
                             <constraint firstItem="OS2-RZ-m85" firstAttribute="top" secondItem="WUP-Bq-CcZ" secondAttribute="bottom" constant="8" id="Wzm-vy-voF"/>
                             <constraint firstItem="WUP-Bq-CcZ" firstAttribute="top" secondItem="TB1-wO-jC4" secondAttribute="bottom" constant="12" id="XEi-jD-db8"/>
                             <constraint firstItem="T21-tY-jOH" firstAttribute="top" secondItem="g10-a1-Yc3" secondAttribute="bottom" constant="8" id="YwQ-RV-zdO"/>
-                            <constraint firstItem="Fe7-8x-bUu" firstAttribute="top" secondItem="b9c-c0-0K6" secondAttribute="bottom" constant="12" id="Zkb-ja-Bk5"/>
+                            <constraint firstItem="Fe7-8x-bUu" firstAttribute="top" secondItem="b9c-c0-0K6" secondAttribute="bottom" constant="19" id="Zkb-ja-Bk5"/>
                             <constraint firstItem="OS2-RZ-m85" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g2M-qP-l8R"/>
                             <constraint firstItem="b9c-c0-0K6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKl-Km-fuz"/>
                             <constraint firstItem="g10-a1-Yc3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mSz-pL-gik"/>
@@ -116,7 +115,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.375" y="31.690140845070424"/>
+            <point key="canvasLocation" x="378.75" y="31.690140845070424"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2i5-au-qbD">
+            <objects>
+                <navigationController id="BJl-s9-CnP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uml-FM-TRl">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wiw-48-fvs" kind="relationship" relationship="rootViewController" id="dXK-hl-r2E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQY-yV-KGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262" y="32"/>
+        </scene>
+        <!--Rate Date View Controller-->
+        <scene sceneID="thk-Ab-7qn">
+            <objects>
+                <viewController id="Wiw-48-fvs" customClass="RateDateViewController" customModule="ConversionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwf-df-fCy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Currency Conversion  Croatian National Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCv-Lh-uLA">
+                                <rect key="frame" x="76.5" y="80" width="167.5" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Rate Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-dX-yC3">
+                                <rect key="frame" x="87" y="153" width="146" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-IR-rFa">
+                                <rect key="frame" x="0.0" y="182.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="589212027.87086201">
+                                    <!--2019-09-03 14:00:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTE-fv-pwU">
+                                <rect key="frame" x="40" y="407" width="240" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonClicked:" destination="Wiw-48-fvs" eventType="touchUpInside" id="MaR-hf-I3G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gTE-fv-pwU" firstAttribute="leading" secondItem="0Yy-Jq-FMZ" secondAttribute="leading" constant="40" id="21c-b7-t4e"/>
+                            <constraint firstItem="gTE-fv-pwU" firstAttribute="top" secondItem="Zeb-IR-rFa" secondAttribute="bottom" constant="8.5" id="3ML-WU-aba"/>
+                            <constraint firstItem="wXh-dX-yC3" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="4aG-gD-gyg"/>
+                            <constraint firstItem="Zeb-IR-rFa" firstAttribute="trailing" secondItem="0Yy-Jq-FMZ" secondAttribute="trailing" id="5BU-4f-Vmz"/>
+                            <constraint firstItem="0Yy-Jq-FMZ" firstAttribute="trailing" secondItem="gTE-fv-pwU" secondAttribute="trailing" constant="40" id="Fz9-G4-BqF"/>
+                            <constraint firstItem="Zeb-IR-rFa" firstAttribute="leading" secondItem="0Yy-Jq-FMZ" secondAttribute="leading" id="O3A-BC-Kxs"/>
+                            <constraint firstItem="hCv-Lh-uLA" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="c2b-a2-PpA"/>
+                            <constraint firstItem="hCv-Lh-uLA" firstAttribute="top" secondItem="0Yy-Jq-FMZ" secondAttribute="top" constant="16" id="rhI-cB-Lf8"/>
+                            <constraint firstItem="wXh-dX-yC3" firstAttribute="top" secondItem="hCv-Lh-uLA" secondAttribute="bottom" constant="19" id="sdv-Dy-JNv"/>
+                            <constraint firstItem="Zeb-IR-rFa" firstAttribute="top" secondItem="wXh-dX-yC3" secondAttribute="bottom" constant="7.5" id="xsY-xL-cqw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Yy-Jq-FMZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F4E-Yg-23w"/>
+                    <connections>
+                        <outlet property="rateDatePicker" destination="Zeb-IR-rFa" id="hc5-s4-z04"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCurrencyConversionSegue" id="1sH-zv-U1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtS-08-mJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-427.5" y="31.690140845070424"/>
         </scene>
     </scenes>
 </document>

@@ -2,8 +2,8 @@
 //  Rate+CoreDataProperties.swift
 //  ConversionApp
 //
-//  Created by Leonard Lopatic on 22/09/2018.
-//  Copyright © 2018 Leonard Lopatic. All rights reserved.
+//  Created by Leonard Lopatic on 03/09/2019.
+//  Copyright © 2019 Leonard Lopatic. All rights reserved.
 //
 //
 
@@ -20,10 +20,9 @@ extension Rate {
     @NSManaged public var buyingRate: Double
     @NSManaged public var currencyCode: String?
     @NSManaged public var medianRate: Double
+    @NSManaged public var rateDate: NSDate?
     @NSManaged public var sellingRate: Double
-    @NSManaged public var unitValue: Int64
     @NSManaged public var seqNo: Int64
-    @NSManaged public var relCurrency: Currency?
-    @NSManaged public var relRateDate: RateDate?
+    @NSManaged public var unitValue: Int64
 
 }
