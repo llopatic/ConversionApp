@@ -160,26 +160,35 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTE-fv-pwU">
-                                <rect key="frame" x="40" y="407" width="240" height="36"/>
+                                <rect key="frame" x="136.5" y="450.5" width="47" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonClicked:" destination="Wiw-48-fvs" eventType="touchUpInside" id="MaR-hf-I3G"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-Pg-tnM">
+                                <rect key="frame" x="133.5" y="406.5" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="todayButtonClicked:" destination="Wiw-48-fvs" eventType="touchUpInside" id="8RL-Al-jfo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gTE-fv-pwU" firstAttribute="leading" secondItem="0Yy-Jq-FMZ" secondAttribute="leading" constant="40" id="21c-b7-t4e"/>
-                            <constraint firstItem="gTE-fv-pwU" firstAttribute="top" secondItem="Zeb-IR-rFa" secondAttribute="bottom" constant="8.5" id="3ML-WU-aba"/>
                             <constraint firstItem="wXh-dX-yC3" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="4aG-gD-gyg"/>
                             <constraint firstItem="Zeb-IR-rFa" firstAttribute="trailing" secondItem="0Yy-Jq-FMZ" secondAttribute="trailing" id="5BU-4f-Vmz"/>
-                            <constraint firstItem="0Yy-Jq-FMZ" firstAttribute="trailing" secondItem="gTE-fv-pwU" secondAttribute="trailing" constant="40" id="Fz9-G4-BqF"/>
+                            <constraint firstItem="gTE-fv-pwU" firstAttribute="top" secondItem="TEQ-Pg-tnM" secondAttribute="bottom" constant="8" id="8va-B4-aeh"/>
+                            <constraint firstItem="TEQ-Pg-tnM" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="JKo-lv-pjT"/>
                             <constraint firstItem="Zeb-IR-rFa" firstAttribute="leading" secondItem="0Yy-Jq-FMZ" secondAttribute="leading" id="O3A-BC-Kxs"/>
+                            <constraint firstItem="gTE-fv-pwU" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="Wyf-fw-SLF"/>
                             <constraint firstItem="hCv-Lh-uLA" firstAttribute="centerX" secondItem="cwf-df-fCy" secondAttribute="centerX" id="c2b-a2-PpA"/>
                             <constraint firstItem="hCv-Lh-uLA" firstAttribute="top" secondItem="0Yy-Jq-FMZ" secondAttribute="top" constant="16" id="rhI-cB-Lf8"/>
                             <constraint firstItem="wXh-dX-yC3" firstAttribute="top" secondItem="hCv-Lh-uLA" secondAttribute="bottom" constant="19" id="sdv-Dy-JNv"/>
                             <constraint firstItem="Zeb-IR-rFa" firstAttribute="top" secondItem="wXh-dX-yC3" secondAttribute="bottom" constant="7.5" id="xsY-xL-cqw"/>
+                            <constraint firstItem="TEQ-Pg-tnM" firstAttribute="top" secondItem="Zeb-IR-rFa" secondAttribute="bottom" constant="8" id="yag-le-6Et"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Yy-Jq-FMZ"/>
                     </view>

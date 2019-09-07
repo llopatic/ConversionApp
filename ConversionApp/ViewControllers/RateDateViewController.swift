@@ -16,6 +16,9 @@ class RateDateViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func todayButtonClicked(_ sender: UIButton) {
+        rateDatePicker.date = Date()
+    }
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
         performSegue(withIdentifier: "toCurrencyConversionSegue", sender: nil)
